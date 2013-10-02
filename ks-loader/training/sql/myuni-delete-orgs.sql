@@ -7,7 +7,7 @@
 delete from KSOR_ORG where id not in ('4','141','UW000')
 /
 -- Rebrand curriculum hierarchy as mentioned in comment above
-update KSOR_ORG set LNG_DESCR='My University Root Node', SHRT_DESCR='MYUCURROOT',LONG_NAME='My University Root Node'  where id='141'
+update KSOR_ORG set LNG_DESCR='My University Root Node', SHRT_DESCR='MYUCURROOT',LNG_NAME='My University Root Node'  where id='141'
 /
 -- Clean out relations
 delete from KSOR_ORG_ORG_RELTN
