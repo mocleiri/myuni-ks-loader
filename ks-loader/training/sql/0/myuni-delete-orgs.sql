@@ -1,3 +1,6 @@
+--
+-- RUN THIS BEFORE LOADING IN THE ORGS FROM THE EXCEL SPREADSHEET
+--
 
 -- Delete reference orgs.  The reason we are leaving 4, 141, and UW000 is 
 -- because there's a foreign key constraint preventing us from deleting orgs that
@@ -19,6 +22,3 @@ delete from KSOR_ORG_PERS_RELTN
 /
 delete from KSOR_ORG_JN_ORG_PERS_REL_TYPE
 /
-
- 
- 
