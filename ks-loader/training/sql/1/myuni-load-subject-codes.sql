@@ -1,11 +1,11 @@
 --
 --  RUN THE ORG DATA LOADER BEFORE DEFINING THE SUBJECT CODES, SINCE WE ARE GOING TO JOIN SUBHECT CODE TO ORG ID 145
---  FROM THE EXCEL SPREADSHEET TO LOADER IS USING.
+--  FROM THE EXCEL SPREADSHEET THE LOADER IS USING.
 --
 
 --
 -- Setup subject codes (areas)
--- For MyUni, we'll erase all the codes and just add a single for astrology (ASTR)
+-- For MyUni, we'll erase all the codes and just add a single subject code for astrology (ASTR)
 --
 --
 -- Delete the subject code join table (that table joining subject codes to orgs)

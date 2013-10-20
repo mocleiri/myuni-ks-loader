@@ -4,5 +4,18 @@
 
 
 ALTER SEQUENCE KREW_RTE_NODE_CFG_PARM_S INCREMENT BY 2000;
+/
 SELECT KREW_RTE_NODE_CFG_PARM_S.NEXTVAL FROM dual;
+/
 ALTER SEQUENCE KREW_RTE_NODE_CFG_PARM_S INCREMENT BY 1;
+/
+
+
+
+-- Delete duplicate KIM types in rice data.  These are breaking the roles
+-- Screen since there are two KIM 'College Type' records:  101, 10008
+-- and two 'Department Type' records: 102, 10009
+delete from KRIM_TYP_T where KIM_TYP_ID='10008'
+/
+delete from KRIM_TYP_T where KIM_TYP_ID='10009'
+/
