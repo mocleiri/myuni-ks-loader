@@ -19,12 +19,13 @@ ALTER SEQUENCE KREW_RTE_NODE_S INCREMENT BY 1;
 
 
 
--- These don't need to run.  You just need to restart rice.
-
+- 
 -- Delete duplicate KIM types in rice data.  These are breaking the roles
 -- Screen since there are two KIM 'College Type' records:  101, 10008
 -- and two 'Department Type' records: 102, 10009
---delete from KRIM_TYP_T where KIM_TYP_ID='10008'
---/
---delete from KRIM_TYP_T where KIM_TYP_ID='10009'
---/
+delete from KRIM_TYP_T where KIM_TYP_ID='10008'
+/
+delete from KRIM_TYP_T where KIM_TYP_ID='10009'
+/
+
+ 
