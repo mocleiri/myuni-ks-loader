@@ -1,13 +1,14 @@
 -- Create a namespace to make it easier to upgrade, delete roles, etc
 -- Also, in general, always delete before inserting.  This allows you to run the script multiple times.  Will calls this "self healing" SQL.
+DELETE FROM KRIM_ROLE_PERM_T WHERE OBJ_ID like 'MYUNI%'
+/
 DELETE FROM KRCR_NMSPC_T WHERE NMSPC_CD = 'MYUNI-KS-CM'
 /
 DELETE FROM KRIM_PERM_T WHERE NMSPC_CD = 'MYUNI-KS-CM'
 /
 DELETE FROM KRIM_PERM_ATTR_DATA_T WHERE OBJ_ID like 'MYUNI%'
 /
-DELETE FROM KRIM_ROLE_PERM_T WHERE OBJ_ID like 'MYUNI%'
-/
+
 
 
 INSERT INTO KRCR_NMSPC_T (NMSPC_CD, OBJ_ID, VER_NBR, NM, ACTV_IND, APPL_ID)
